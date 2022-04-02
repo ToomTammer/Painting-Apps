@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/toolbar_bg">
+
+            <ImageButton
+                android:id="@+id/btn_act"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_baseline_build_24"
+                android:text="Act"
+                android:background="@color/notbg"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_undo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_baseline_undo_24"
+                android:text="Undo"
+                android:background="@color/notbg"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_baseline_lens_24"
+                android:text="Circle"
+                android:background="@color/notbg"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_baseline_color_lens_24"
+                android:text="Color"
+                android:background="@color/notbg"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_stroke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_baseline_brush_24"
+                android:text="Stroke"
+                android:background="@color/notbg"
+
+                />
+        </LinearLayout>
+
+        ///Action
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/menu_act"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/black_bg2"
+                android:visibility="gone"
+
+                >
+
+            <ImageButton
+                android:id="@+id/btn_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_baseline_folder_open_24"
+                android:text="Open"
+                android:background="@color/notbg"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_baseline_download_24"
+                android:text="Save"
+                android:background="@color/notbg"
+                />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        ///RangeSlider Path
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rangebar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/black_bg2"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_below="@id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+
+       <com.example.paintapp.DrawView
+            android:id="@+id/draw_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/linear"
+            android:layout_centerInParent="true"
+            />
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
